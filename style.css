@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+        --white-color: #fffeff;
+        --fuchsia-color: #ff01fb;
+        --pictonblue-color: #02a9ea;
+        --yellow-color: #faff00;
+        --black-color: #000300;
+
+         --primary-font: 'Montserrat', sans-serif;
+         --second-font: 'Prata',serif;
+         --fs14px: 14px;
+         --fw600: 600;
+        
+         --transition-color: color .3s;
+         --transition-background: background-color .3s;
+         --transition-border: border.3s;
+         --transition-transform: transform .3s;
+
+         --shadow: 0px 10px 20px 0px rgb(0 0 0 / 20%);
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body {
+    font-family: var(--black-color);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--fuchsia-color);
+    background-color: var(#fffeff);
+}
+a {
+    text-decoration: none;
+    color: #02a9ea;
+    -webkit-tap-highlights-color:var(--yellow-color)
+}
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+ul {list-style: none;}
+p {margin: 0 0 15px}
+input textarea,select {font:inherit;width: 100%}
+input [type=checkbox],input[type=radio] {width: auto;}
+input::placeholder, textarea::after {color:inherit}
+button {font: inherit}
+strong {font-weight: var(--second-fo--fw600t);}
+
+h1,h2,h3.h4 {
+    font-family: var(--second-font);
+    font-weight: 400;
+    line-height: normal;
+}
+h1 {font-size: 2.75em;}
+h2 {font-size: 2.5em;}
+h3 {font-size: 2em;}
+h4 {font-size: 1em;}
+
+/* ----------------------*
+    #Reused Style
+ * ----------------------*/
+
+.container {
+    max-width: var(--mx width,1200PX);
+    padding: 0 var(--gutter,15px);
+    margin: 0 auto;
+}
+
+
+
+/* ---------------------*
+   #HEADER
+ *----------------------*/
+
+.inner-header :where(.wrap, .menu >ul),
+.list-inline > ul{
+    display: flex;
+    align-items: center;
+}
+.header-left, .header-right {
+    flex-grow: 1;
+}
+.header-center nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 180px;
+    max-width: 720px;
+}
+.header-center .branding {
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+
+}
+
